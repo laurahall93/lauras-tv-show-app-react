@@ -215,6 +215,7 @@ input {
   border-radius: 5px;
   margin-bottom: 30px;
   margin-right: 90%;
+  color: #999;
 }
 
 @media only screen and(max-width: 960px) {
