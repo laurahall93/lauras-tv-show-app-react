@@ -30,8 +30,9 @@ export function MainBody(): JSX.Element {
   return (
     <>
       <input
+        className="search-box"
         type="text"
-        placeholder="search a movie or tv show"
+        placeholder="Search..."
         value={searchInput}
         onChange={handleChange}
       />
