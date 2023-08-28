@@ -30,12 +30,12 @@ export const EpisodesEntry = (episode: IEpisode): JSX.Element => {
     <div className="episode-entry">
       <section>
         <div className="container">
-          <div className="episode-title">
-            <p>
-              {episode.name} {episodeCode(episode.season, episode.number)}
-            </p>
-          </div>
           <img src={episode.image.medium} alt="" />
+        </div>
+        <div className="episode-title">
+          <p>
+            {episode.name} {episodeCode(episode.season, episode.number)}
+          </p>
         </div>
         <br />
         <a href={episode.url}>Link to the episode</a>

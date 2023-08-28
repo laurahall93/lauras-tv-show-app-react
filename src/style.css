@@ -71,11 +71,6 @@ a {
       .bold {
         font-weight: bold;
       }
-
-      p {
-        display: inline-block;
-        margin-right: 10px;
-      }
     }
 
     .right {
@@ -193,11 +188,12 @@ img {
 }
 
 .episode-title {
-  border: 1px solid black;
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
   font-weight: 600;
   font-size: 18px;
-  justify-content: center;
   align-content: center;
   padding: 10px 5px;
   color: black;
