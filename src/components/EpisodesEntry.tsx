@@ -1,5 +1,3 @@
-import episodeCode from "../utils/episodesCode";
-
 export interface Image {
   medium: string;
   original: string;
@@ -9,20 +7,11 @@ export interface IEpisode {
   id?: number;
   url?: string;
   name: string;
-  season: number;
-  number: number;
-  type?: string;
-  airdate?: string;
-  airtime?: string;
-  airstamp?: string;
-  rating?: { average?: number };
-  runtime?: number;
   image: {
     medium: string;
     original?: string;
   };
   summary: string;
-  _links?: { self: { href?: string } };
 }
 
 export const EpisodesEntry = (episode: IEpisode): JSX.Element => {
@@ -30,16 +19,18 @@ export const EpisodesEntry = (episode: IEpisode): JSX.Element => {
     <div className="episode-entry">
       <section>
         <div className="container">
-          <img src={episode.image.medium} alt="" />
+          {episode.image != null && <img src={episode.image.medium} alt="" />}
         </div>
         <div className="episode-title">
-          <p>
-            {episode.name} {episodeCode(episode.season, episode.number)}
-          </p>
+          <p>{episode.name}</p>
         </div>
         <br />
         <a href={episode.url}>Link to the episode</a>
-        <p className="summary">{episode.summary}</p>
+        {episode.summary != null && (
+          <p className="summary">
+            {episode.summary.replaceAll(/<\/?[^>]+(>|$)/gi, "")}
+          </p>
+        )}
       </section>
     </div>
   );

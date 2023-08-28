@@ -10,15 +10,6 @@ body {
   margin-left: 50px;
 }
 
-a {
-  text-decoration: none;
-  transition-duration: 0.3s;
-
-  &:hover {
-    transition-duration: 0.05s;
-  }
-}
-
 .window {
   margin: auto;
   border-radius: 5px;
@@ -54,38 +45,6 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 40px;
-  .title-bar {
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-    overflow: hidden;
-
-    .left {
-      float: left;
-      font-size: 15px;
-      text-transform: uppercase;
-
-      .grey {
-        color: #999;
-      }
-
-      .bold {
-        font-weight: bold;
-      }
-    }
-
-    .right {
-      float: right;
-
-      a {
-        color: #999;
-        margin-left: 10px;
-
-        &.blue {
-          color: #279ceb;
-        }
-      }
-    }
-  }
 }
 
 .episode-entry {
@@ -172,6 +131,7 @@ a {
 
 .summary,
 a {
+  margin-left: 30px;
   padding: 10px;
   color: gray;
   font-weight: 400;
